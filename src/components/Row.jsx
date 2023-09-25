@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import tmdAxiosIns from '../tmdbAxiosIns'
 
-function Row() {
+function Row({title,fetchUrl}) {
+  const [allMovies,setAllMovies] = useState()
+  const fechData = async ()=>{
+    const {data} = await tmdAxiosIns.get(fetchUrl)
+    setAllMovies(data.results)
+  }
+
+console.log(allMovies);
+  useEffect(()=>{
+    fechData()
+  },[])
   return (
-    <div>Row</div>
+    <div>
+      <h1>{title}</h1>
+    </div>
   )
 }
 
-export default Row
+export default Row;

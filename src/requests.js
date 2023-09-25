@@ -11,9 +11,4 @@ const requests = {
     fetchDocumentaries:`/discover/movie?api_key=${APIKEY}&with_genres=99`,
 }
 
-  baseURL: "https://api.themoviedb.org/3",
-
-  const base_url = "https://image.tmdb.org/t/p/original/";
-
-  fectchNerflixOriginals : "https://api.themoviedb.org/3/discover/tv?api_key=47de2b9e8b2462b53975d18185ac40bf&with_networks=213"
-
+export default requests;

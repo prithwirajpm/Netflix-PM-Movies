@@ -1,10 +1,10 @@
 import './App.css';
 import Row from './components/Row';
+import requests from './requests';
 function App() {
   return (
-    <div className="App">
-      <h1>netflix</h1>
-      <Row />
+    <div>
+      <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>
     </div>
   );
 }
