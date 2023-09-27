@@ -17,7 +17,17 @@ console.log(Movie);
     fechData()
   },[])
   return (
-    <div>Bannar</div>
+    <div style={{
+      height:'600px',
+      backgroundImage:`url(${base_url}/${Movie?.backdrop_path})`,
+      backgroundSize:'cover',
+      backgroundAttachment:'fixed'
+    }}>
+      <div className='banner-content'>
+        <h1>{Movie?.name}</h1>
+        <h2>{Movie?.overview?.slice(0,200)}...</h2>
+      </div>
+    </div>
   )
 }
 
